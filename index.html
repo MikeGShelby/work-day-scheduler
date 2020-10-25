@@ -18,7 +18,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -26,18 +29,147 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay" class="lead">**Current Day**</p>
     </header>
-    <div class="container">
-      <ul>
-        <li>
 
-        </li>
-      </ul>
+    <main class="main">
       <!-- Timeblocks go here -->
-    </div>
+      <ul class="col-12 flex-column">
+
+        <li class="row">
+          <section class="col-1 hour">
+            9 AM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+        <li class="row">
+          <section class="col-1 hour">
+            10 AM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+        <li class="row">
+          <section class="col-1 hour">
+            11 AM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+        <li class="row">
+          <section class="col-1 hour">
+            12 PM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+        <li class="row">
+          <section class="col-1 hour">
+            1 PM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+        <li class="row">
+          <section class="col-1 hour">
+            2 PM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+        <li class="row">
+          <section class="col-1 hour">
+            3 PM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+        <li class="row">
+          <section class="col-1 hour">
+            4 PM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+        <li class="row">
+          <section class="col-1 hour">
+            5 PM
+          </section>
+          <section id="text-area" class="col-10">
+            Task example text
+          </section>
+          <button class="col-1 saveBtn">
+            <span class="material-icons">
+              save
+            </span>
+          </button>
+        </li>
+
+
+      </ul>
+
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+
   </body>
 </html>
