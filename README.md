@@ -12,7 +12,7 @@ A simple calendar application that allows a user to save events for each hour of
 * Moment.js
 
 ## Website Screenshot
-![Work Day Scheduler Screenshot](https://github.com/mikegshelby/work-day-scheduler/raw/main/assets/images/work-day-scheduler-screenshot.jpg "Website Screenshot")
+![Work Day Scheduler Screenshot](https://github.com/mikegshelby/work-day-scheduler/raw/develop/assets/images/work-day-scheduler-screenshot.jpg "Website Screenshot")
 
 
 ## Website
