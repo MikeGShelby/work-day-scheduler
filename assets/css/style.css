@@ -25,8 +25,9 @@ body {
 
 .text-area:hover {
   transition: all .3s ease-in-out;
-  background-color:rgb(135, 141, 141);
+  /* background-color:rgb(135, 141, 141); */
   cursor: pointer;
+  filter: brightness(75%);
 }
 
 .row {
