@@ -1,9 +1,10 @@
+// Empty array for all tasks
 var tasks = []
 
-
+// Current day and date
 var currentDate = moment().format("dddd" + ", " + "MMMM DD");
 
-// add current day and date to header
+// Display current day and date in header
 $('#currentDay').text(currentDate);
 
 // // LOAD ANY SAVED TASKS WHEN PAGE IS LOADED
@@ -19,7 +20,67 @@ $('#currentDay').text(currentDate);
 // }
 
 
+// TASK PARAGRAPH WAS CLICKED
+$(".row").on("click", ".text-area", function() {
+    var text = $(this)
+      .text()
+      .trim();
 
+    var textInput = $("<textarea>")
+      .addClass("form-control col-10")
+      .val(text);
+
+    $(this).replaceWith(textInput);
+
+    textInput.trigger("focus");
+
+    console.log(text);
+  });
+
+// SAVE TO LOCAL STORAGE
+var saveTask = function() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+};
+
+// SAVE BUTTON WAS CLICKED
+$(".saveBtn").click(function() {
+
+    // STEP 1. get textarea element
+    var textArea = $(this).prev();
+    var textClasses = $(this).prev().attr("class");
+
+    if ($(textArea).hasClass("form-control")) {
+
+        // STEP 1. get text and time values
+        var taskText = $(this).prev().val();
+        var taskTime = $(this).parent().attr("id");
+        console.log(taskText);
+        console.log(taskTime);
+
+        // STEP 3: recreate text section element
+        var textSection = $("<section>")
+        .addClass("col-10 text-area").text(taskText);
+
+        $(textArea).replaceWith(textSection);
+
+        // STEP 4. run task audit to re-add color coding
+        auditTask();
+
+        // save in tasks array
+        tasks.push({
+            time: taskTime,
+            taskText: taskText
+        });
+
+        saveTask();
+    }
+
+    else {
+        return;
+    }
+});
+
+// EVALUATE ALL TASK TIMES AND APPLY COLORS TO EACH TASK BASED ON CURRENT TIME
 var auditTask = function () {
     // get current time and log it to console
     var currentTime = moment().get("hours");
@@ -51,41 +112,6 @@ var auditTask = function () {
 }
 
 auditTask();
-
-
-
-
-
-
-
-// get current time
-
-
-
-
-
-
-
-// AUDIT TASKS WITH CONDITIONAL FORMATTING BASED ON DUE DATE
-// var auditTask = function() {
-//     // STEP 1: get time from task element
-//     var time = $(#task-hour).text().trim();
-
-    // // STEP 2: convert to moment object at 5:00pm
-    // var time = moment(date, "L").set("hour", 17);
-
-    // // STEP 3: remove any old classes from element
-    // $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
-
-    //  // apply new class if task is near/over due date
-    //  if (moment().isAfter(time)) {
-    //   $(taskEl).addClass("list-group-item-danger");
-    //  }
-    //  else if (Math.abs(moment().diff(time, "days")) <= 2) {
-    //   $(taskEl).addClass("list-group-item-warning");
-    // }
-//   };
-
 
 // load tasks for the first time
 // loadTasks();
