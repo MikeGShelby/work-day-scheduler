@@ -77,14 +77,20 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-
   .hour {
     transform: rotate(-90deg);
     border-top: none;
     text-align: center;
     padding: 0px 10px;
+  }
+}
 
-
+@media screen and (max-width: 350px) {
+  .main {
+    width: 95%;
   }
 
+  .jumbotron h1 {
+  font-size: 3.5rem;
+  }
 }
